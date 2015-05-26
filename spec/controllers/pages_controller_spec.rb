@@ -26,9 +26,10 @@
 # end
 
 require 'rails_helper'
+
 RSpec.describe PagesController, type: :controller do 
   
-
+ 
   render_views
   
   describe "GET 'home'" do
@@ -55,9 +56,8 @@ RSpec.describe PagesController, type: :controller do
     
     it "should have the right title" do
       get 'contact'
-      expect(response).to have_selector("title",
-      :content =>
-      "Ruby on Rails Tutorial Sample App | Contact")
+      expect(response).to have_tag("title",
+         :content =>"Ruby on Rails Tutorial Sample App | Contact")
     end
   
   end

@@ -5,11 +5,13 @@ gem 'rspec-autotest'
 
 group :development do
 	gem 'rspec-rails', '3.2.0'
+	gem  'rspec-html-matchers'
 end
 
 group :test do
 	gem 'rspec', '3.2.0'
 	gem 'webrat', '0.7.3'
+	gem  'rspec-html-matchers'
 end
 
 gem 'autotest-rails', :group => [:development, :test]
