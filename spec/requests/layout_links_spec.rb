@@ -7,7 +7,7 @@ RSpec.describe "sampleApp Router", :type => :routing do
 	end
 
 	it "should have a Contact page at '/contact'" do
-		expect(:get => "/pages/contact").to route_to(:controller => "pages", :action =>"contact")
+		expect(:get => "/contact").to route_to(:controller => "pages", :action =>"contact")
 	end
 	
 	it "should have an About page at '/about'" do
