@@ -1,4 +1,7 @@
 require "rails_helper"
+require 'capybara/rails'
+require 'capybara/rspec'
+
 
 RSpec.describe "sampleApp Router", :type => :routing do
   
@@ -16,6 +19,20 @@ RSpec.describe "sampleApp Router", :type => :routing do
 	
 	it "should have a Help page at '/help'" do
 		expect(:get => "/help").to route_to(:controller => "pages", :action =>"help")
+	end
+
+	it "should have the right links on the layout" do
+		visit root_path
+		click_link "About"
+		expect(page).to have_content 'Success'
+		click_link "Help"
+		expect(page).to have_content 'Success'
+		click_link "Contact"
+		expect(page).to have_content 'Success'
+		click_link "Home"
+		expect(page).to have_content 'Success'
+		click_link "Sign up now!"
+		expect(page).to have_content 'Success'
 	end
 end
 

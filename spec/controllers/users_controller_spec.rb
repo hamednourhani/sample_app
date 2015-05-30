@@ -13,7 +13,7 @@ RSpec.describe UsersController , :type => :controller do
 		
 		it "should have the right title" do
 			get 'new'
-			expect(response.body).to include("Sing Up</title>")
+			expect(response.body).to include("Sign Up</title>")
 		end
 	end
 end
