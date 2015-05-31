@@ -6,6 +6,7 @@ group :development do
 	gem 'rspec-rails', '3.2.0'
 	gem 'capybara'
 	gem 'capybara-screenshot', :require => false
+	gem 'annotate'
 
 end
 
